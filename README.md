@@ -1,11 +1,19 @@
 === Order Receipts Sender for WooCommerce ===
+
 Contributors: fahadkhalid211
+
 Tags: woocommerce, order receipt, whatsapp, telegram, sms
+
 Requires at least: 5.8
+
 Tested up to: 6.9
+
 Stable tag: 2.1.0
+
 Requires PHP: 7.4
+
 License: GPLv2 or later
+
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Send WooCommerce order receipts via WhatsApp, Telegram and SMS simultaneously. Includes OTP login and registration verification.
