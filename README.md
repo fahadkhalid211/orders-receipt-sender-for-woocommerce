@@ -317,20 +317,6 @@ Open an issue at https://github.com/fahadkhalid211/
 
 ---
 
-== Screenshots ==
-
-1. Settings — General & Active Channels: enable receipts, choose trigger status, select channels.
-2. Settings — WhatsApp Provider: choose your provider and enter credentials.
-3. Settings — Telegram: enter Bot Token and Admin/Fallback Chat ID.
-4. Settings — Message Templates: customise WhatsApp/Telegram and SMS templates with placeholder tags.
-5. Settings — OTP Login: configure OTP verification for login and registration.
-6. Settings — Test Sender: test each channel independently with a live test message.
-7. Checkout — Custom Fields: WhatsApp/SMS phone and Telegram Chat ID fields.
-8. Login Form — OTP Section: OTP identifier input and Send OTP button below the standard form.
-9. Order Detail (Admin) — messaging contact info and receipt send status.
-10. Order Notes — automatic success/failure notes added per channel after each send attempt.
-
----
 
 == Changelog ==
 
