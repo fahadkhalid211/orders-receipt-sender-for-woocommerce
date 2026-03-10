@@ -1,0 +1,1 @@
+# orders-receipt-sender-for-woocommerce
