@@ -251,44 +251,69 @@ Go to WooCommerce → Settings → Messaging Receipt → Message Templates to cu
 == Frequently Asked Questions ==
 
 = Does this plugin disable the default WooCommerce email? =
+
 No. WooCommerce emails fire exactly as they always have. This plugin sends messaging receipts in addition to the email — it never replaces or suppresses email.
 
+
 = Which channel should I start with? =
+
 Telegram is the easiest to set up (free, 2 minutes, no customer opt-in required beyond sharing their Chat ID at checkout). For wider reach without needing a Chat ID, try SMS via TextBelt for testing or Twilio for production.
 
+
 = Can I send on multiple channels at once? =
+
 Yes. Tick all the channels you want under Active Channels. Every enabled channel receives the receipt simultaneously for each qualifying order. A failure on one channel is logged as an order note but does not affect the others.
 
+
 = When is the receipt sent? =
+
 By default, when the order reaches Processing status (after successful payment). You can change this to Pending Payment, On Hold, or Completed in the Trigger on Status setting.
 
+
 = What if a customer does not provide a WhatsApp number or Telegram Chat ID? =
+
 For WhatsApp and SMS, the plugin falls back to the WooCommerce billing phone number. For Telegram, it falls back to the Admin/Fallback Chat ID you set — so you still get notified.
 
+
 = Can I manually resend a receipt? =
+
 Yes. Open any order in WooCommerce → Orders, click the Order Actions dropdown (top right of the order detail page), select Resend Messaging Receipt, and click the arrow button to run it.
 
+
 = What phone number format should customers use? =
+
 International E.164 format with a + prefix — for example +358401234567 or +12025550123. The checkout field validates this format automatically and shows an error if it is incorrect.
 
+
 = Can I use OTP login without making it mandatory? =
+
 Yes. Enable OTP Login but leave Require OTP to Login unchecked. Customers can then choose either their password or OTP — both methods will work.
 
+
 = Does the plugin create any database tables? =
+
 Yes, one table: {prefix}orm_otps. It stores temporary hashed OTP codes and is created automatically on plugin activation. Expired entries are cleaned up hourly. The table is not dropped on deactivation (to preserve any pending data across upgrades).
 
+
+
 = Is this plugin compatible with WooCommerce HPOS? =
+
 Yes. Order data is accessed via standard WooCommerce CRUD methods ($order->get_meta(), $order->get_billing_phone(), etc.), which are fully compatible with both the legacy posts-based storage and the new High-Performance Order Storage.
 
+
 = I receive the test message but customers do not. What is wrong? =
+
 The most common cause is a missing recipient value. Check that:
 1. The customer has provided a phone number or Chat ID at checkout.
 2. The correct checkout field is active in the plugin settings (WhatsApp/SMS requires billing_whatsapp; Telegram requires billing_telegram_chat_id).
 3. The phone number is in E.164 format.
 Check the order notes — they show exactly which channels were attempted and any error returned by the API.
 
+
 = Where can I report bugs or request features? =
+
 Open an issue at https://github.com/fahadkhalid211/
+
 
 ---
 
